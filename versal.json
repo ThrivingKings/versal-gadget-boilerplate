@@ -1,0 +1,10 @@
+{
+  "launcher": "iframe",
+  "name": "gadget-boilerplate",
+  "version": "1.0.0",
+  "title": "Gadget boilerplate",
+  "description": "Starting point for versal gadgets",
+  "author": "Versal",
+  "defaultUserState": {
+  }
+}
