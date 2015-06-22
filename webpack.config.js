@@ -31,7 +31,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules|bower_components/,
-        loader: 'jsx?harmony=true'
+        loader: 'babel'
       }
     ]
   }
