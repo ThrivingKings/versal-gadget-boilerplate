@@ -1,5 +1,5 @@
 {
-  "name": "quiz-gadget",
+  "name": "gadget-boilerplate",
   "dependencies": {
     "versal-gadget-api": "~0.0.14"
   }
