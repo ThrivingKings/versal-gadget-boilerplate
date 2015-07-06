@@ -1,7 +1,7 @@
 {
   "scripts": {
     "prepublish": "bower install",
-    "tests": "karma start",
+    "test": "karma start",
     "start": "make",
     "build": "make build-prod",
     "upload": "versal upload"

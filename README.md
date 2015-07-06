@@ -12,7 +12,7 @@ npm start
 
 Put all tests in ```./tests``` directory with file name format of ```[component].test.js```
 ```
-npm run tests
+npm test
 ```
 
 ## Uploading
