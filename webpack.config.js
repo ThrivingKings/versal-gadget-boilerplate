@@ -1,17 +1,17 @@
-var webpack = require('webpack');
-var path = require("path");
+var manifest = require('./versal.json')
 
 module.exports = {
   entry: {
-    gadget: './js/versal/gadget'
-  },
-  resolve: {
-    root: [path.join(__dirname, "bower_components")]
+    gadget: './components/gadget'
   },
   output: {
-    path: __dirname + '/dist/',
-    publicPath: 'dist/',
-    filename: '[name].js'
+    filename: 'gadget.js',
+    library: ['VersalGadgets', manifest.name],
+    libraryTarget: 'assign'
+  },
+  externals: {
+    'react/addons': 'React',
+    'react': 'React'
   },
   jshint: require('./jshint.config'),
   module: {

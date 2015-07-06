@@ -1,14 +1,11 @@
 {
   "scripts": {
-    "prepublish": "bower install",
     "test": "karma start",
-    "start": "make",
-    "build": "make build-prod",
+    "start": "webpack --colors --watch & versal preview",
+    "build": "webpack --colors -p",
     "upload": "versal upload"
   },
   "dependencies": {
-    "underscore": "~1.8.3",
-    "random-js": "~1.0.4",
     "react": "~0.13.1"
   },
   "devDependencies": {
@@ -26,7 +23,6 @@
     "karma-webpack": "~1.5.0",
     "mocha": "~2.2.4",
     "style-loader": "~0.8.3",
-    "webpack": "~1.8.4",
-    "yargs": "~3.7.0"
+    "webpack": "~1.8.4"
   }
 }

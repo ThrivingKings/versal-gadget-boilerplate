@@ -1,16 +1,31 @@
 'use strict';
 
-// We need the webpack config so we can bundle the tests identically
-var webpack = require('./webpack.config');
-
 module.exports = function(config) {
   config.set({
-    files: ['tests/*.test.js'],
+    files: [
+      'node_modules/react/dist/react-with-addons.js',
+      'tests/*.test.js'
+    ],
     frameworks: ['mocha'],
     preprocessors: {
-      '{components,lib,tests}/**/*.js': ['webpack']
+      '{components,tests}/*.js': ['webpack']
     },
-    webpack: webpack,
+    webpack: {
+      module: {
+        loaders: [
+          {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            loader: 'style!css'
+          },
+          {
+            test: /\.js$/,
+            exclude: /node_modules|ckeditor/,
+            loader: 'babel'
+          }
+        ]
+      }
+    },
     webpackMiddleware: {
       noInfo: true
     },
