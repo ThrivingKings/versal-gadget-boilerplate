@@ -9,19 +9,7 @@ module.exports = {
     library: ['VersalGadgets', manifest.name],
     libraryTarget: 'assign'
   },
-  externals: {
-    'react/addons': 'React',
-    'react': 'React'
-  },
-  jshint: require('./jshint.config'),
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules|bower_components/,
-        loader: 'jsxhint'
-      }
-    ],
     loaders: [
       {
         test: /\.css$/,
@@ -31,7 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules|bower_components/,
-        loader: 'babel'
+        loader: 'babel-loader'
       }
     ]
   }
